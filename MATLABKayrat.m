@@ -9,7 +9,7 @@ dlgtitle = 'Sää';
 fieldsize = [1 45];
 definput = {''};
 answer = inputdlg(prompt, dlgtitle,fieldsize,definput);
-url = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/?key=SMHZJVM7LAWP95ENVRJY2YKFJ';
+url = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/?key=INSERT_OWN_API_KEY';
 url = insertAfter(url,'timeline/',string(answer));
 
 weather = webread(url);
@@ -344,3 +344,4 @@ for i = 1:0.1:50
     hold off
     pause(0.1)
 end
+
