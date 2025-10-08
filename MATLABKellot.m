@@ -38,15 +38,23 @@ clearvars
 close all
 clc
 
-%INSERT OWN API KEY
-url = '';
+url = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Lappeenranta?key=INSERT_OWN_API_KEY';
 
 try
     weather = webread(url);
     n = weather.currentConditions.moonphase;
 catch
-    n = 0.25;
+    [~, kuukausi, paiva, ~, ~, ~] = kello();
+    if kuukausi == 1 && kuukausi == 3 && kuukausi == 5 && kuukausi== 7 && kuukausi == 8 && kuukausi == 10 && kuukausi == 12
+        maxpaiva = 31;
+    elseif kuukausi == 2
+        maxpaiva = 28;
+    else
+        maxpaiva = 30;
+    end
+    n = paiva/maxpaiva;
 end
+
 t = linspace(0,2*pi,1000);
 kuu =@(i) [cos(i)-1.5;sin(i)];
 R = @(j) [cos(j), -sin(j); sin(j), cos(j)];
@@ -442,4 +450,5 @@ function[tz, kuukausi, paiva, h, m, s] = kello()
     m = T.Minute;
     s = T.Second;
 end
+
 
