@@ -1,5 +1,47 @@
+% h,s-piirros
+% h,s-chart
+clearvars
+close all
+clc
+% h,s-piirros
+% h,s-chart
+
+S = 5.2e3:10:9e3;
+
+x = 0.66:0.01:1;
+T = 290:10:1000;
+P = [1e3:5e2:4e3, 5e3:1e3:9e3, 10e3:2e3:19e3, 20e3:5e3:45e3, 50e3:10e3:90e3, 100e3:20e3:280e3, 300e3:50e3:550e3, 600e3:100e3:1.9e6, 2e6:200e3:2.8e6, 3e6:500e3:4.5e6, 5e6:1e6:16e6, 18e6:2e6:28e6, 30e6:5e6:50e6];
+
+paine = zeros(381,90);
+lampotila = zeros(381,72);
+
+v = 1;
+
+for i = S
+    w = 1;
+    u = 1;
+    for j = T
+        lampotila(v,w) = py.CoolProp.CoolProp.PropsSI('H','T',j,'S', i, 'Water');
+        w = w+1;
+    end
+
+    for j = P
+        paine(v,u) = py.CoolProp.CoolProp.PropsSI('H','P',j,'S', i, 'Water');
+        u = u+1;
+    end
+    v = v +1;
+end
+
+hold on
+plot(S, lampotila', 'r')
+plot(S, paine', 'k')
+axis([5.2e3, 9e3, 2e6, 4e6])
+grid on
+
+%%
 %Olio_ohjelmoinnin harjoitustyö MATLAB edition
 %Sää sovellus
+%Weather app
 clearvars
 close all
 clc
@@ -344,4 +386,5 @@ for i = 1:0.1:50
     hold off
     pause(0.1)
 end
+
 
