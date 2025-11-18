@@ -3,9 +3,6 @@
 clearvars
 close all
 clc
-% h,s-piirros
-% h,s-chart
-
 S = 5.2e3:10:9e3;
 
 x = 0.66:0.01:1;
@@ -37,11 +34,10 @@ plot(S, lampotila', 'r')
 plot(S, paine', 'k')
 axis([5.2e3, 9e3, 2e6, 4e6])
 grid on
-
 %%
-%Olio_ohjelmoinnin harjoitustyö MATLAB edition
-%Sää sovellus
-%Weather app
+% Olio_ohjelmoinnin harjoitustyö MATLAB edition
+% Sää sovellus
+% Weather app
 clearvars
 close all
 clc
@@ -51,7 +47,7 @@ dlgtitle = 'Sää';
 fieldsize = [1 45];
 definput = {''};
 answer = inputdlg(prompt, dlgtitle,fieldsize,definput);
-url = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/?key=INSERT_OWN_API_KEY';
+url = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/?key=SMHZJVM7LAWP95ENVRJY2YKFJ';
 url = insertAfter(url,'timeline/',string(answer));
 
 weather = webread(url);
@@ -85,8 +81,8 @@ plot(dates, ctemps);
 title('Sää');
 ylabel('Celsius')
 grid on
-%Pori
-%Kemi
+% Pori
+% Kemi
 %%
 clearvars
 close all
@@ -108,7 +104,8 @@ p = 0.99;
 comet(x,y,p)
 
 %%
-%polaarikäyrä versio
+% polaarikäyrä versio
+% polar curve version
 clearvars 
 close all
 clc
@@ -127,7 +124,8 @@ r = sin((24*t)/25);
 
 polarplot(t,r)
 %%
-%Sydän
+% Sydän
+% Heart
 
 clearvars
 close all
@@ -141,7 +139,8 @@ p = 0.99;
 comet(x,y,p)
 
 %%
-%Spiraali
+% Spiraali
+% Spiral
 
 clearvars
 close all
@@ -221,7 +220,8 @@ p = 0.90;
 
 comet(x,y,p)
 %%
-%Tähti
+% Tähti
+% Star
 
 clearvars
 close all
@@ -262,7 +262,8 @@ p = 0.90;
 comet(x,y,p)
 
 %%
-%Lissajous käyrä
+% Lissajous käyrä
+% Lissajous curve
 
 clearvars
 close all
@@ -283,7 +284,6 @@ n = 10;
 %c=pi/2 käyrä
 
 
-
 t = -200:0.1:200;
 
 x = a.*sin(n.*t+c);
@@ -293,7 +293,8 @@ p = 0.90;
 comet(x,y,p)
 
 %%
-%Random käyrä generaattori
+% Random käyrä generaattori
+% Random curve generator
 
 clearvars
 close all
@@ -325,7 +326,8 @@ for P=1:5
    end
 end
 %%
-%Sydän
+% Sydän
+% Heart
 
 clearvars
 close all
@@ -340,7 +342,8 @@ view(3)
 axis image
 
 %%
-%Polaarikäyrät
+% Polaarikäyrät
+% Polar curves
 
 clearvars
 close all
@@ -351,7 +354,8 @@ rho = exp(t/10);
 polarplot(t,rho);
 
 %%
-%The butterfly curve
+% Perhoskäyrä
+% The butterfly curve
 clearvars
 close all
 clc
@@ -386,5 +390,3 @@ for i = 1:0.1:50
     hold off
     pause(0.1)
 end
-
-
