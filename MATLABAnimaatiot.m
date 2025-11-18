@@ -1,6 +1,5 @@
-%%
-%Aurinkokunta 2D
-
+% Aurinkokunta 2D
+% Solar System 2D
 clearvars
 close all
 clc
@@ -32,7 +31,8 @@ while 1
 end
 
 %%
-%Aurinkokunta 3D
+% Aurinkokunta 3D
+% Solar System 3D
 
 clearvars
 close all
@@ -71,8 +71,9 @@ while 1
     i = i+0.01;
 end
 %%
-%Paljon merkkejä tehty randomilla
-%Siisti todennäköisyys kaavio
+% Paljon merkkejä tehty randomilla
+% Siisti todennäköisyys kaavio
+
 clearvars
 close all
 clc
@@ -96,7 +97,7 @@ histogram(R, 'Normalization','probability')
 
 
 %%
-%Partikkeli juttu
+% Partikkeli juttu
 clearvars
 close all
 clc
@@ -125,7 +126,7 @@ while 1
     axis([-2 2 -2 2 -4 4])
 end
 %%
-%Tee jotain siistiä latex koodilla tai text funktiolla
+% Tee jotain siistiä latex koodilla tai text funktiolla
 clearvars
 close all
 clc
@@ -138,7 +139,8 @@ r_txt = num2str(sekunti);
 txt2.String = ['\bf ', r_txt];
 txt2 = text(0.5,0.2,txt2.String);
 %%
-%Aalto-animaatio
+% Aalto-animaatio
+% Wave animation
 clearvars
 close all
 clc
@@ -159,61 +161,65 @@ clearvars
 close all
 clc
 
+p = fplot(@(x) 0.1*cos(0*x^x));
+
 for i = 0.1:0.1:15
-    p = fplot(@(x) 0.1*cos(i*x^x));
+    p.Function = @(x) 0.1*cos(i*x^x);
     pause(0.1)
-    delete(p)
 end
 
 %%
 clearvars
 close all
 clc
+
+p = fplot(@(x) 2*sin(0*cos(x)))
+axis([-2 2 -2 2])
 
 for i = 0.1:0.1:10
-    p = fplot(@(x) 2*sin(i*cos(x)));
+    p.Function = @(x) 2*sin(i*cos(x))
     pause(0.01)
-    delete(p)
 end
-fplot(@(x) 2*sin(10*cos(x)))
+
 %%
 clearvars
 close all
 clc
+
+p = fplot(@(x) sin(0) + x*cos(0));
+axis([-6 6 -4 4])
+grid on
 
 for i = 0.1:0.1:15
-    p = fplot(@(x) sin(i) + x*cos(i));
-    axis([-6 6 -4 4])
-    grid on
+    p.Function = @(x) sin(i) + x*cos(i);
     pause(0.01)
-    delete(p)
 end
-fplot(@(x) sin(10) + x*cos(10))
 
 %%
 clearvars
 close all
 clc
 
+p = fplot(@(x) sin(0)*x+sin(x)*0);
+axis([-60 60 -60 60])
+
 for i = 0:0.1:50
-    p = fplot(@(x) sin(i)*x+sin(x)*i);
-    axis([-60 60 -60 60])
+    p.Function = @(x) sin(i)*x+sin(x)*i;
     pause(0.01)
-    delete(p)
 end
-fplot(@(x) sin(50)*x+sin(x)*50);
+
 %%
 clearvars
 close all
 clc
 t = 0:0.1:8*pi;
 
+p = polarplot(t, 3*sin(0*t));
+
 for i = 0:0.01:1
-    p = polarplot(t, 3*sin(i*t));
+    p.RData = 3*sin(i*t);
     pause(0.05)
-    delete(p)
 end
-polarplot(t, 3*sin(t))
 
 %%
 clearvars
@@ -221,12 +227,13 @@ close all
 clc
 t = 0:0.01:8*pi;
 
+p = polarplot(t, sin((0/5)*t));
+
 for i = 0:0.1:20
-    p = polarplot(t, sin((i/5)*t));
+    p.RData = sin((i/5)*t);
     pause(0.05)
-    delete(p)
 end
-polarplot(t, sin((20/5)*t))
+
 %%
 %Tee jotain siistiä viiva animaatioilla cos tai sin funktioilla
 clearvars
@@ -257,7 +264,8 @@ for k = 1:length(x)
     drawnow
 end
 %%
-%Lihasjännitys
+% Lihasjännitys
+% Muscle tension
 
 clearvars
 close all
@@ -281,7 +289,7 @@ end
 clearvars
 close all
 clc
-%Lateksii ry:n logo
+% Lateksii ry:n logot
 
 hold on
 x = [-0.25,0.25,0.1,-0.1,-0.25];
@@ -361,7 +369,8 @@ for i = 1:numel(X)
     plot(X, Y)
 end
 %%
-%Sylinteri
+% Sylinteri
+% Cylinder
 
 clearvars
 close all
@@ -408,7 +417,7 @@ end
 close(videoObject)
 
 %%
-%JPEG-kuva
+% JPEG-kuva
 clearvars
 close all
 clc 
