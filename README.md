@@ -1,4 +1,4 @@
-Just some of my own projects done on MATLAB
+**Just some of my own projects done on MATLAB**
 <br />
 
 MatlabAnimaatiot: some cool Matlab animations
@@ -18,9 +18,9 @@ MatlabKayrat: interesting curves drawn on Matlab
 
 MatlabKellot: Matlab clock animations
 <br />
-
 <br />
-Joitain projekteja, jotka on tehty MATLABilla
+
+**Joitain projekteja, jotka on tehty MATLABilla**
 <br />
 
 MatlabAnimaatiot: hienoja Matlab animaatioita
