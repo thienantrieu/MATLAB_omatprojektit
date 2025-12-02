@@ -1,4 +1,5 @@
 %IP-osoitteen sijainti
+%Location of IP-address
 clearvars
 close all
 clc
@@ -29,7 +30,7 @@ geolimits([s(1)-l s(1)+l],[s(2)-l s(2)+l])
 geobasemap satellite
 
 %%
-% Geoguesser
+% Geoguessr
 clearvars
 close all
 clc
@@ -41,3 +42,4 @@ l = 0.1;
 geoscatter(r1,r2)
 geolimits([r1-l, r1+l], [r2-l, r2-l])
 geobasemap satellite
+
