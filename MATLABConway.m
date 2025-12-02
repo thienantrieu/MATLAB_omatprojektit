@@ -1,6 +1,5 @@
-%%
 %Conwayn peli
-
+%Conway's Game of Life
 clearvars
 close all 
 clc
@@ -49,8 +48,10 @@ end
 
 %%
 %Conwayn peli
+%Conway's Game of Life
 %Animaatio 1
 %Ötökkä/Kiituri
+%Glider
 
 clearvars
 close all 
@@ -108,6 +109,7 @@ end
 
 %%
 %Conwayn peli
+%Conway's Game of Life
 %Animaatio 2
 %Bucky/joku hassu muu
 
@@ -162,4 +164,5 @@ while 1
     pause(0.05)
     nykyinen_elama=uusi_elama;
 end
+
 
