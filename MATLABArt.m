@@ -1,4 +1,5 @@
 % MATLAB logo
+% https://se.mathworks.com/help/matlab/visualize/creating-the-matlab-logo.html
 clearvars
 close all
 clc
@@ -48,6 +49,7 @@ axis off
 f.Color = 'black';
 
 %%
+% From YouTube video https://www.youtube.com/watch?v=Ey-W3xwNJU8&t=1s
 clearvars
 close all
 clc
