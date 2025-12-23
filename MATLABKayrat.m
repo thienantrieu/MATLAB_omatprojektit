@@ -47,7 +47,7 @@ dlgtitle = 'Sää';
 fieldsize = [1 45];
 definput = {''};
 answer = inputdlg(prompt, dlgtitle,fieldsize,definput);
-url = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/?key=SMHZJVM7LAWP95ENVRJY2YKFJ';
+url = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/?key=INSERT_OWN_API_KEY';
 url = insertAfter(url,'timeline/',string(answer));
 
 weather = webread(url);
@@ -81,9 +81,13 @@ plot(dates, ctemps);
 title('Sää');
 ylabel('Celsius')
 grid on
+% Doesn't work with citys below:
 % Pori
 % Kemi
 %%
+% From YouTube video 
+% https://www.youtube.com/watch?v=Ey-W3xwNJU8&t=1s
+% https://www.youtube.com/watch?v=nMcCgYHcDww
 clearvars
 close all
 clc
@@ -390,3 +394,4 @@ for i = 1:0.1:50
     hold off
     pause(0.1)
 end
+
