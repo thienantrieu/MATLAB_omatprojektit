@@ -384,6 +384,7 @@ fplot(@(x) x*sin(x))
 axis([-60 60 -60 60])
 
 %%
+% Cool finding
 clearvars
 close all
 clc 
@@ -394,4 +395,5 @@ for i = 1:0.1:50
     hold off
     pause(0.1)
 end
+
 
