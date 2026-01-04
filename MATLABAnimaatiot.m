@@ -1,3 +1,29 @@
+% Spinning Fibonacci spiral
+% https://www.instagram.com/p/DCtUTALP16m/?img_index=1
+clearvars
+close all
+clc
+
+n = 500;
+R = linspace(0,1,n);
+T = 4/(1+sqrt(5))*pi*(1:n);
+X = R.*cos(T);
+Y = R.*sin(T);
+newplot
+tf = hgtransform;
+scatter(tf,X,Y,R*30+10,R,'filled')
+daspect([1 1 1])
+axis off
+
+angle = 0;
+speed = T(1);
+while 1
+    angle = angle+speed;
+    tf.Matrix = makehgtform('zrotate',-angle);
+    pause(1/120)
+end
+
+%%
 % Aurinkokunta 2D
 % Solar System 2D
 clearvars
@@ -436,3 +462,4 @@ imshow('kakku.jpg')
 
 nexttile([2 2])
 imshow('aamuja.png')
+
