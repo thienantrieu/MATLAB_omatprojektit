@@ -7,9 +7,6 @@ MatlabAnimaatiot: some cool Matlab animations
 MatlabArt: some artsy things on Matlab
 <br />
 
-MatlabConway: Conway's Game of Life animation on Matlab
-<br />
-
 MatlabGeo: geo things on Matlab
 <br />
 
@@ -27,9 +24,6 @@ MatlabAnimaatiot: hienoja Matlab animaatioita
 <br />
 
 MatlabArt: jotain taiteellisia juttuja Matlabilla
-<br />
-
-MatlabConway: Conwayn Game of Life animaatio Matlabilla
 <br />
 
 MatlabGeo: geo juttuja Matlabilla
