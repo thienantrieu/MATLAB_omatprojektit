@@ -1,35 +1,35 @@
 **Just some of my own projects done on MATLAB**
 <br />
 
-MatlabAnimaatiot: some cool Matlab animations
+MatlabAnimaatiot: some cool MATLAB animations
 <br />
 
-MatlabArt: some artsy things on Matlab
+MatlabArt: some artsy things on MATLAB
 <br />
 
-MatlabGeo: geo things on Matlab
+MatlabGeo: geo things on MATLAB
 <br />
 
-MatlabKayrat: interesting curves drawn on Matlab
+MatlabKayrat: interesting curves drawn on MATLAB
 <br />
 
-MatlabKellot: Matlab clock animations
+MatlabKellot: MATLAB clock animations
 <br />
 <br />
 
 **Joitain projekteja, jotka on tehty MATLABilla**
 <br />
 
-MatlabAnimaatiot: hienoja Matlab animaatioita
+MatlabAnimaatiot: hienoja MATLAB animaatioita
 <br />
 
-MatlabArt: jotain taiteellisia juttuja Matlabilla
+MatlabArt: jotain taiteellisia juttuja MATLABilla
 <br />
 
-MatlabGeo: geo juttuja Matlabilla
+MatlabGeo: geo juttuja MATLABilla
 <br />
 
 MatlabKayrat: kiinnostavia käyriä piirretty Matlabilla
 <br />
 
-MatlabKellot: Matlab kello-animaatioita
+MatlabKellot: MATLAB kello-animaatioita
